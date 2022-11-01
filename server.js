@@ -2,7 +2,8 @@ const express = require('express');
 const path = require('path');
 const api = require('./routes/api_routes.js');
 
-const PORT = 3001;
+// const PORT = 3001;
+const port = process.env.PORT || 3001;
 
 const app = express();
 
@@ -24,5 +25,5 @@ app.get('/notes', (req, res) =>
 );
 
 app.listen(PORT, () =>
-  console.log(`App listening at http://localhost:${PORT} 🚀`)
+  console.log(`App listening on port:${PORT} 🚀`)
 );
